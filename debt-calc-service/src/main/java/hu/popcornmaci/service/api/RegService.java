@@ -1,6 +1,8 @@
 package hu.popcornmaci.service.api;
 
+import hu.popcornmaci.dao.entity.Person;
+
 public interface RegService {
-	public void register(String fullName,String username, String passw) throws RegException;
+	public Person register(String fullName,String username, String passw) throws RegException;
 	
 }

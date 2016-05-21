@@ -19,6 +19,14 @@ import hu.popcornmaci.service.api.DebtService;
 public class DebtServiceImpl implements DebtService {
 	private ShoppingDao shd = new ShoppingDaoImpl();
 
+	public DebtServiceImpl() {
+	}
+
+	public DebtServiceImpl(ShoppingDao shd) {
+		super();
+		this.shd = shd;
+	}
+
 	@Override
 	public Map<Person, Double> getDebtTo(Person person, LocalDate from, LocalDate to) {
 		List<Shopping> list = shd.findByPersonId(person.getId());

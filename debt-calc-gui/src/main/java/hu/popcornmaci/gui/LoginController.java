@@ -55,6 +55,7 @@ public class LoginController implements Initializable{
             root = loader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            stage.setTitle(String.format("Szia %s!", LoginInfo.getPerson().getFullName()));
             stage.show();
 		} catch (LoginException e) {
 			new Alert(AlertType.ERROR, e.getMessage(), ButtonType.OK).show();

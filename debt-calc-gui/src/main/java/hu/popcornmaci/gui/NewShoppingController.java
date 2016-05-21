@@ -104,6 +104,10 @@ public class NewShoppingController implements Initializable {
 			new Alert(AlertType.ERROR, "Hiányzó dátum/Mai dátumnál nem lehet későbbi a dátum", ButtonType.OK).show();
 			return;
 		}
+		if(itemList.isEmpty()){
+			new Alert(AlertType.ERROR, "Üres a tétel lista", ButtonType.OK).show();
+			return;
+		}
 		Stage stage;
 		Parent root;
 		stage = (Stage) nextButton.getScene().getWindow();
@@ -139,5 +143,13 @@ public class NewShoppingController implements Initializable {
 			}
 		});
 		date.setValue(LocalDate.now());
+	}
+
+	public void initFromList(List<Item> items) {
+		itemList = items;
+		for (Item item : items) {
+			addLabel(item);
+		}
+		
 	}
 }

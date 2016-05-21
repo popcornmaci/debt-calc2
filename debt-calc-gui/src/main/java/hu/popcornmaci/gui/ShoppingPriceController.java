@@ -104,8 +104,8 @@ public class ShoppingPriceController implements Initializable {
 		stage = (Stage) backButton.getScene().getWindow();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/NewShopping.fxml"));
 		root = loader.load();
-		RegController controller = loader.getController();
-		controller.setParentScene(stage.getScene());
+		NewShoppingController controller = loader.getController();
+		controller.initFromList(shopping.getItems());
 		Scene scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();

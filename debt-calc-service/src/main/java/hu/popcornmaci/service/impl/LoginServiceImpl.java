@@ -11,11 +11,19 @@ import hu.popcornmaci.service.api.LoginService;
 public class LoginServiceImpl implements LoginService {
 
 	private PersonDao dao = new PersonDaoImpl();
-	
+
+	public LoginServiceImpl() {
+	}
+
+	public LoginServiceImpl(PersonDao dao) {
+		super();
+		this.dao = dao;
+	}
+
 	@Override
 	public Person login(String username, String passw) throws LoginException {
 		Person person = dao.findByUsername(username);
-		if(person==null || !BCrypt.checkpw(passw, person.getPassword())){
+		if (person == null || !BCrypt.checkpw(passw, person.getPassword())) {
 			throw new LoginException("Rossz felhasználónév/jelszó");
 		}
 		return person;

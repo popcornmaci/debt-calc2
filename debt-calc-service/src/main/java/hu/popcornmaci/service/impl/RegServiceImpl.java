@@ -10,10 +10,19 @@ import hu.popcornmaci.service.api.RegService;
 
 public class RegServiceImpl implements RegService{
 
-	private PersonDao dao = new PersonDaoImpl();
+	private PersonDao dao;
 	
+	public RegServiceImpl() {
+		dao=new PersonDaoImpl();
+	}
+	
+	public RegServiceImpl(PersonDao dao) {
+		super();
+		this.dao = dao;
+	}
+
 	@Override
-	public void register(String fullName, String username, String passw) throws RegException {
+	public Person register(String fullName, String username, String passw) throws RegException {
 		String hashed = BCrypt.hashpw(passw, BCrypt.gensalt(12));
 		Person person = dao.findByUsername(username);
 		if(person!=null){
@@ -21,6 +30,7 @@ public class RegServiceImpl implements RegService{
 		}
 		person= new Person(fullName, username, hashed);
 		dao.save(person);
+		return person;
 	}
 
 }

@@ -49,6 +49,17 @@ public class RegController implements Initializable{
 			new Alert(AlertType.ERROR, e.getMessage(), ButtonType.OK).show();
 		}
 	}
+	@FXML 
+	private void cancelButtonAction() throws IOException{
+        Stage stage;
+        Parent root;
+        stage = (Stage) regButton.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Login.fxml"));
+        root = loader.load();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		regS = new RegServiceImpl();

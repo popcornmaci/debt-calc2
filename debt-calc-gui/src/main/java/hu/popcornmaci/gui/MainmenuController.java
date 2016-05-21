@@ -25,6 +25,7 @@ public class MainmenuController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
 	}
 	@FXML
 	private void calcButtonAction() throws IOException{

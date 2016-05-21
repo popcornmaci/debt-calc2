@@ -12,7 +12,7 @@
       <TextField fx:id="userNameField" layoutX="133.0" layoutY="79.0" />
       <PasswordField fx:id="passwordField" layoutX="133.0" layoutY="116.0" />
       <Button fx:id="regButton" layoutX="50.0" layoutY="188.0" mnemonicParsing="false" onAction="#onRegAction" prefHeight="30.0" prefWidth="83.0" text="Regisztrál" />
-      <Button fx:id="cancelButton" layoutX="166.0" layoutY="188.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" text="Mégsem" />
+      <Button fx:id="cancelButton" layoutX="166.0" layoutY="188.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="30.0" prefWidth="83.0" text="Mégsem" />
       <Label layoutX="19.0" layoutY="46.0" prefHeight="17.0" prefWidth="116.0" text="Név:" />
       <Label layoutX="19.0" layoutY="83.0" prefHeight="17.0" prefWidth="116.0" text="Felhasználónév:" />
       <Label layoutX="19.0" layoutY="120.0" prefHeight="17.0" prefWidth="116.0" text="Jelszó:" />
