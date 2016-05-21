@@ -14,6 +14,16 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
+		<licenses>
+		<license>
+			<name>Apache License version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<organization>
+		<name>Faculty of Informatics, University of Debrecen</name>
+	</organization>
+	<inceptionYear>2016</inceptionYear>
 	<build>
 		<plugins>
 			<plugin>
