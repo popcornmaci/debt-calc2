@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="368.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.popcornmaci.gui.CalculatorController">
+   <children>
+      <DatePicker fx:id="dateFrom" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="146.0" />
+      <DatePicker fx:id="dateTo" layoutX="183.0" layoutY="35.0" prefHeight="25.0" prefWidth="146.0" />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="146.0" text="Mettől:" />
+      <Label layoutX="183.0" layoutY="14.0" prefHeight="17.0" prefWidth="123.0" text="Meddig:" />
+      <Label layoutX="14.0" layoutY="71.0" prefHeight="17.0" prefWidth="146.0" text="Tartozol:" />
+      <Label layoutX="208.0" layoutY="71.0" prefHeight="17.0" prefWidth="123.0" text="Tartozik:" />
+      <ScrollPane layoutX="14.0" layoutY="97.0" prefHeight="215.0" prefWidth="174.0">
+         <content>
+            <VBox fx:id="debtTo" prefHeight="200.0" prefWidth="157.0" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="208.0" layoutY="97.0" prefHeight="215.0" prefWidth="174.0">
+         <content>
+            <VBox fx:id="debtFrom" prefHeight="200.0" prefWidth="157.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="okButton" layoutX="349.0" layoutY="35.0" mnemonicParsing="false" onAction="#okButtonAction" text="OK" />
+      <Button fx:id="backButton" layoutX="331.0" layoutY="329.0" mnemonicParsing="false" onAction="#backButtonAction" text="Vissza" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="247.0" prefWidth="296.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.popcornmaci.gui.RegController">
+   <children>
+      <TextField fx:id="fullNameField" layoutX="133.0" layoutY="42.0" />
+      <TextField fx:id="userNameField" layoutX="133.0" layoutY="79.0" />
+      <PasswordField fx:id="passwordField" layoutX="133.0" layoutY="116.0" />
+      <Button fx:id="regButton" layoutX="50.0" layoutY="188.0" mnemonicParsing="false" onAction="#onRegAction" prefHeight="30.0" prefWidth="83.0" text="Regisztrál" />
+      <Button fx:id="cancelButton" layoutX="166.0" layoutY="188.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" text="Mégsem" />
+      <Label layoutX="19.0" layoutY="46.0" prefHeight="17.0" prefWidth="116.0" text="Név:" />
+      <Label layoutX="19.0" layoutY="83.0" prefHeight="17.0" prefWidth="116.0" text="Felhasználónév:" />
+      <Label layoutX="19.0" layoutY="120.0" prefHeight="17.0" prefWidth="116.0" text="Jelszó:" />
+   </children>
+</AnchorPane>
